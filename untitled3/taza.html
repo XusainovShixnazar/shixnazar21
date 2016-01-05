@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>
+        sayt calc
+    </title>
+    <script src="resources/jquery.js"></script>
+    <script src="resources/jquery.min.js"></script>
+    <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/bootstrap/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class=" col-md-offset-5 col-md-4"><h1 class="text-center text-justify"style="font-family: fantasy">Calc System</h1></div>
+    </div>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-6">
+            <table class="table table-bordered">
+                <thead>
+                    <tr style="background-color:#b2dba1"><th colspan="4"><h1 class="text-center">Calc</h1></th><tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th><input id="a" type="text" placeholder="1-son"></th>
+                        <th><input id="b" type="text" placeholder="2-son"></th>
+                        <th><input id="c" type="text" placeholder="3-son"></th>
+                        <th><button id="but" type="button" onclick="hisob()" class="btn-block" style="width:120px; margin-left:10px;">Natija</button></th>
+                    </tr>
+                    <tr>
+                        <th colspan="2"><input type="text" style="width:400px;" placeholder="yig'indisi = "></th>
+                        <th colspan="2"><input type="text" style="width:350px;" placeholder="natijasi" id="yi"></th>
+                    </tr>
+                    <tr>
+                        <th colspan="2"><input type="text" style="width:400px;" placeholder="ayirmasi = "></th>
+                        <th colspan="2"><input type="text" style="width:350px;" placeholder="natijasi" id="ay"></th>
+                    </tr>
+                    <tr>
+                        <th colspan="2"><input type="text" style="width:400px;" placeholder="ko'paytmasi = "></th>
+                        <th colspan="2"><input type="text" style="width:350px;" placeholder="natijasi" id="ko"></th>
+                    </tr>
+                    <tr>
+                        <th colspan="2"><input type="text" style="width:400px;" placeholder="bo'lish = "></th>
+                        <th colspan="2"><input type="text" style="width:350px;" placeholder="natijasi" id="bo"></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+    <script>
+        function hisob() {
+            var a = parseFloat(document.getElementById('a').value);
+            var b = parseFloat(document.getElementById('b').value);
+            var c = parseFloat(document.getElementById('c').value);
+            document.getElementById('yi').value = a + b + c;
+            document.getElementById('ay').value = a - b - c;
+            document.getElementById('ko').value = a * b * c;
+            document.getElementById('bo').value = a / b / c;
+        }
+    </script>
+</body>
+</html>
